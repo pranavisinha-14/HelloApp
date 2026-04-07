@@ -3,20 +3,10 @@ public class HelloApp {
 
         if (args.length == 0) {
             System.out.println("Hello, World!");
-            return;
-        }
-
-        StringBuilder nameBuilder = new StringBuilder();
-
-        // Add all names with ", "
-        for (String name : args) {
-            nameBuilder.append(name).append(", ");
-        }
-
-        // Remove trailing ", "
-        if (nameBuilder.length() > 0) {
-            String names = nameBuilder.substring(0, nameBuilder.length() - 2);
+        } else {
+            String names = String.join(", ", args);
             System.out.println("Hello, " + names + "!");
         }
     }
+}
 }
